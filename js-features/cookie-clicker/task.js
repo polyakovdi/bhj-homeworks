@@ -1,9 +1,8 @@
 //Задание 2
-const picture = document.querySelector('.clicker__cookie');
-let counter = document.getElementById("clicker__counter").innerHTML;
+const cookieElem = document.getElementById('cookie');
+const cookieClicker = document.getElementById('clicker__counter');
+let counter = 0;
 
-picture.onclick = () => {
-   counter++
-   picture.width == 200 ? (picture.width = 300) : (picture.width = 200);
-   document.getElementById("clicker__counter").innerHTML = counter;
+cookieElem.onclick = () => {
+  cookieElem.width = ++cookieClicker.textContent % 2 ? 250 : 200
 }
