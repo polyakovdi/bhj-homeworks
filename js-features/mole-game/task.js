@@ -37,4 +37,4 @@ const end = () => {
    document.getElementById("lost").innerHTML = 0;
    killMole = 0; 
    lostMole = 0;
-} fjkghfdkjgh
+}
