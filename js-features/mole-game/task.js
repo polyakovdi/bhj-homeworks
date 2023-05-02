@@ -38,3 +38,5 @@ const end = () => {
    killMole = 0; 
    lostMole = 0;
 }
+
+привет мир
