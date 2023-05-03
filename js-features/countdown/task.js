@@ -1,13 +1,17 @@
 // Задание 1
-const inervalId = setInterval(ReverseTimer, 1000);
-countdown();
-function countdown() {
-    seconds = (document.getElementById('timer').textContent)--;
-  
-    if (seconds <= 0) {
-      clearTimeout(timer);
-      alert('Вы победили в конкурсе!')
+let timer;
+let x = 59;
+
+function countDown() {
+    document.getElementById('timer').innerHTML = x;
+    x--;
+
+    if (x < 0) {
+        clearTimeout (timer);
+        alert("Вы победили в конкурсе!")
     } else {
-        setTimeout(countdown, 1000);
+        timer = setTimeout(countDown, 1000);
     }
 }
+
+countDown();
