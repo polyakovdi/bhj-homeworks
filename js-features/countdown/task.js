@@ -1,5 +1,5 @@
 // Задание 1
-let countdownSeconds = 40;
+let countdownSeconds = 59;
 
 function countdown() {
   console.log(countdownSeconds);
