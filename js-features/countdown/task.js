@@ -1,17 +1,11 @@
 // Задание 1
-let timer;
-let x = 59;
-
-function countDown() {
-    document.getElementById('timer').innerHTML = x;
-    x--;
-
-    if (x <= 0) {
-        clearTimeout (timer);
-        alert("Вы победили в конкурсе!")
-    } else {
-        timer = setTimeout(countDown, 1000);
-    }
+let countDownn = function() {
+    let timer = document.getElementById("timer");
+    timer.textContent--;
+    if (timer.textContent <= 0) {
+      clearInterval(timerId);
+      alert("Вы победили в конкурсе!");
+    } 
 }
 
-countDown();
+let timerId = setInterval(countDownn, 1000);
