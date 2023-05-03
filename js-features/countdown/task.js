@@ -1,12 +1,14 @@
 // Задание 1
-let countdownSeconds = 59;
+const timer = document.querySelector('timer');
 
-function countdown() {
-  console.log(countdownSeconds);
-  countdownSeconds--;
-  if (countdownSeconds < 0) {
-    clearInterval(countdownInterval);
-    alert('Вы победили в конкурсе!');
-  }
-}
-const countdownInterval = setInterval(countdown, 1000);
+const timerId = setInterval(() => {
+    const value = +timer.textContent;
+
+    if (value > 0) {
+        timer.textContent = value - 1;
+    } else {
+        clearInterval(timerId);
+    }   
+}, 1000)
+
+console.log(timerId, 'timer id');
