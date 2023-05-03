@@ -1,5 +1,5 @@
 // Задание 1
-const startTimer = function() {
+const timerStart = function() {
     let timerBlock = + document.getElementById('timer').textContent;
     if (timerBlock > 0) {
         timerBlock = timerBlock -1;    
@@ -9,4 +9,4 @@ const startTimer = function() {
         document.getElementById('timer').textContent = 59;
     }    
 }
-setInterval(startTimer, 1000);
+setInterval(timerStart, 1000);
