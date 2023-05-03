@@ -1,14 +1,12 @@
 // Задание 1
-const timer = document.querySelector('timer');
-
-const timerId = setInterval(() => {
-    const value = +timer.textContent;
-
-    if (value > 0) {
-        timer.textContent = value - 1;
+const startTimer = function() {
+    let timerBlock = + document.getElementById('timer').textContent;
+    if (timerBlock > 0) {
+        timerBlock = timerBlock -1;    
+        document.getElementById('timer').textContent = timerBlock;
     } else {
-        clearInterval(timerId);
-    }   
-}, 1000)
-
-console.log(timerId, 'timer id');
+        alert('Вы победили в конкурсе!');
+        document.getElementById('timer').textContent = 59;
+    }    
+}
+setInterval(startTimer, 1000);
